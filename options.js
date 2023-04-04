@@ -25,7 +25,7 @@ api.addSearchAlias(
     });
 
 api.addSearchAlias(
-    'h',
+    'hn',
     'Hacker News',
     'https://www.google.com/search?tbs=qdr:y&q=site:news.ycombinator.com+',
     'o',
