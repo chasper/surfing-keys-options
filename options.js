@@ -14,7 +14,20 @@ settings.hintAlign = "left";
 api.addSearchAlias(
     'a',
     'amazon',
-    'https://www.amazon.com/batteries/s?k=',
+    'https://www.amazon.com/s?k=',
+    'o',
+    null,
+    function (response) {
+        var res = JSON.parse(response.text);
+        return res.map(function (r) {
+            return r.phrase;
+        });
+    });
+
+api.addSearchAlias(
+    'h',
+    'Hacker News',
+    'https://www.google.com/search?tbs=qdr:y&q=site:news.ycombinator.com+',
     'o',
     null,
     function (response) {
